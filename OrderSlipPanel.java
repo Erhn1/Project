@@ -337,3 +337,53 @@ public class OrderSlipPanel extends ContentPanel implements ActionListener {
                 mListFrame.setVisible(true); // Make the frame visible
             }
         });
+
+        
+        orderSlipPanel = new JPanel();
+        orderSlipPanel.setBackground(new Color(0xFFBD59));
+        orderSlipPanel.setBounds(685, 0, 500, 585);
+        orderSlipPanel.setLayout(null);
+
+        orderSlipLabel = new JLabel("ORDER SLIP FORM");
+        orderSlipLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+        orderSlipLabel.setForeground(new Color(0x293476));
+        orderSlipLabel.setBounds(110, 20, 280, 30);
+        orderSlipLabel.setHorizontalAlignment(SwingConstants.CENTER); // Center the label horizontally
+        
+        uniformsLabel = new JLabel("UNIFORMS");
+        uniformsLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+        uniformsLabel.setForeground(new Color(0x293476));
+        uniformsLabel.setBounds(200, 25, 280, 30);
+        uniformsLabel.setHorizontalAlignment(SwingConstants.CENTER); // Center the label horizontally
+        
+        confirm = new JButton("CONFIRM");
+        confirm.setHorizontalAlignment(SwingConstants.CENTER);
+        confirm.setFont(new Font("Tahoma", Font.BOLD, 15));
+        confirm.setBackground(new Color(0x293478));
+        confirm.setForeground(Color.WHITE);
+        confirm.setBounds(200, 525, 115, 25);
+        confirm.setFocusable(false);
+        confirm.addActionListener(this);
+        
+        orderSlipPanel.add(orderSlipLabel);
+        orderSlipPanel.add(confirm);
+        
+        itemsPanel.add(next);
+        itemsPanel.add(previous);
+        itemsPanel.add(uniformsList);
+        itemsPanel.add(uniformsLabel);
+        
+
+        addPanel(orderSlipPanel);
+        addPanel(itemsPanel);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    }
+    
+    public static void main (String[] args) {
+        //HomeFrame home = new HomeFrame("NU Bulldog Exchange Queueing Management System");
+	ServiceFrame home = new ServiceFrame("NU Bulldog Exchange Queueing Management System");
+    }
+}    
