@@ -1,4 +1,20 @@
-OrderSlipPanel(int color) {
+package Project;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Arrays;
+import java.util.List;
+import javax.swing.*;
+
+public class OrderSlipPanel extends ContentPanel implements ActionListener {
+    private JFrame uListFrame, mListFrame;
+    private JPanel orderSlipPanel, itemsPanel, merchPanel,uListPanel, mListPanel;
+    private JButton confirm, next, previous, itemsFL, merchFL;
+    private JLabel orderSlipLabel, uniformsLabel, merchLabel, uLabel;
+    private JTable table;
+    private JScrollPane uniformsList, merchList, unifList, merchfList;
+
+    OrderSlipPanel(int color) {
         super(color);
 
         itemsPanel = new JPanel();
